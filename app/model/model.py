@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Body, Request
 from pathlib import Path
 import torch
+import os
 import pandas as pd
 from torch import nn
 import transformers
