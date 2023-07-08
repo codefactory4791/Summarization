@@ -33,6 +33,7 @@ if os.path.isdir(model_path):
     print("Model Loaded")
     t5_model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
 else:
+    print("No Model Artifacts Found")
     tf_model = None
 
 
