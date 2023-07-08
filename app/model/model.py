@@ -17,11 +17,24 @@ max_target_length = 128
 
 
 model_path = "./model_artifacts/"
-
-t5_model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
-
 model_checkpoint ='t5-small'
-    
+
+
+# add the below logic to load the model
+# if os.path.isdir(model_id):
+#             if MODEL_HEAD_NAME in os.listdir(model_id):
+#                 model_head_file = os.path.join(model_id, MODEL_HEAD_NAME)
+#             else:
+#                 model_head_file = None
+
+
+if os.path.isdir(model_path):
+    print("Model Loaded")
+    t5_model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
+else:
+    tf_model = None
+
+
 tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 
 
