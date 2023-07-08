@@ -16,7 +16,7 @@ max_input_length = 1024
 max_target_length = 128
 
 
-model_path = "/app/app/model/model_artifacts/"
+model_path = "./model_artifacts/"
 
 t5_model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
 
