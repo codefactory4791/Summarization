@@ -30,10 +30,17 @@ model_checkpoint ='t5-small'
 
 
 
+def fast_scandir(dirname):
+    subfolders= [f.path for f in os.scandir(dirname) if f.is_dir()]
+    for dirname in list(subfolders):
+        subfolders.extend(fast_scandir(dirname))
+    return subfolders
+
 print("current working directory")
 
 directory = os.getcwd()
-print(os.walk(directory))
+subfolders = fast_scandir(dirname)
+print(subfolders)
 
 
 
