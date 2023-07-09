@@ -17,7 +17,7 @@ max_input_length = 1024
 max_target_length = 128
 
 
-model_path = os.path.abspath("./app/app/model_artifacts/")
+model_path = os.path.abspath("/workspace/app/app/model_artifacts/")
 model_checkpoint ='t5-small'
 
 
