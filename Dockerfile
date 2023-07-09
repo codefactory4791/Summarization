@@ -18,6 +18,7 @@ RUN \
 
 
 RUN git lfs install
+RUN cd ./app
 RUN git lfs pull
 
 # 
