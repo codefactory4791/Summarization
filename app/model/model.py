@@ -39,7 +39,7 @@ def fast_scandir(dirname):
 print("current working directory")
 
 directory = os.getcwd()
-subfolders = fast_scandir(dirname)
+subfolders = fast_scandir(directory)
 print(subfolders)
 
 
