@@ -29,7 +29,7 @@ model_checkpoint ='t5-small'
 #                 model_head_file = None
 
 
-if os.isdir("/workspace"):
+if os.path.isdir("/workspace"):
     print("Yes")
 
 
