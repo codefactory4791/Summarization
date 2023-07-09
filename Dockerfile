@@ -9,6 +9,10 @@ COPY ./requirements.txt /app/requirements.txt
 # 
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
+
+RUN git lfs install
+RUN git lfs pull
+
 # 
 COPY . /app
 
