@@ -31,7 +31,10 @@ model_checkpoint ='t5-small'
 
 
 print("current working directory")
-print(os.getcwd())
+
+directory = os.getcwd()
+print(os.walk(directory))
+
 
 
 
