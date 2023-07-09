@@ -29,6 +29,12 @@ model_checkpoint ='t5-small'
 #                 model_head_file = None
 
 
+if os.isdir("/workspace"):
+    print("Yes")
+
+
+
+
 if os.path.isdir(model_path):
     print("Model Loaded")
     t5_model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
