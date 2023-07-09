@@ -9,7 +9,14 @@ COPY ./requirements.txt /app/requirements.txt
 # 
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-RUN apt-get install git-lfs
+
+RUN \
+  apt-get update && \
+  apt-get install -y sudo curl git && \
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && \
+  sudo apt-get install git-lfs
+
+
 RUN git lfs install
 RUN git lfs pull
 
