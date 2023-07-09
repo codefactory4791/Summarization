@@ -18,11 +18,15 @@ RUN \
 
 
 RUN git lfs install
-RUN cd ./app
-RUN git lfs pull
 
 # 
 COPY . /app
+
+
+RUN cd app
+RUN git lfs pull
+
+
 
 # download the model weights in the image
 RUN python /app/app/model/model.py
