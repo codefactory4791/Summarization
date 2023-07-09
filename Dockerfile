@@ -23,8 +23,7 @@ RUN git lfs install
 COPY . /app
 
 
-RUN cd app/app/
-RUN git lfs pull
+RUN cd app/app/model/model_artifacts && git lfs pull -I pytorch_model.bin
 
 
 
