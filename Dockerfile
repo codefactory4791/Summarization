@@ -23,7 +23,7 @@ RUN git lfs install
 COPY . /app
 
 
-RUN cd app
+RUN cd app/app/
 RUN git lfs pull
 
 
