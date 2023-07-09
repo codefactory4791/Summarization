@@ -9,7 +9,7 @@ COPY ./requirements.txt /app/requirements.txt
 # 
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-RUN sudo apt-get install git-lfs
+RUN apt-get install git-lfs
 RUN git lfs install
 RUN git lfs pull
 
