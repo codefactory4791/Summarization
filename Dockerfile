@@ -19,13 +19,14 @@ RUN \
 
 RUN git lfs install
 
+
+
+
+RUN git clone --no-checkout --depth 1 https://github.com/codefactory4791/summarization.git
+RUN cd summarization/app/model/model_artifacts && git lfs pull -I pytorch_model.bin
+
 # 
 COPY . /app
-
-
-RUN cd /app/app/model/model_artifacts && git lfs pull -I pytorch_model.bin
-
-
 
 # download the model weights in the image
 RUN python /app/app/model/model.py
